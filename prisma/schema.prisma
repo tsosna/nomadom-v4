@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator zod {
+  provider = "pnpx zod-prisma-types"
+  output   = "../src/lib/schemas/generated/"
+}
+
+model Project {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  slug String  @unique
+  path String
+  name String
+  icon String?
+
+  img Img @relation(fields: [imgId], references: [id])
+  imgId Int @unique
+
+  @@map("project")
+}
+
+model Img {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  hash    String  @unique
+  url     String  @unique
+  alt     String?
+  caption String?
+
+  project Project?
+  elevation Elevation?
+  
+    @@map("img")
+}
+
+model Elevation {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  name String
+
+  img Img @relation(fields: [imgId], references: [id])
+  imgId Int @unique
+
+  @@map("elevation")
+}

@@ -1,0 +1,101 @@
+{
+	"description-web-site": "Prefabricated modular houses with high aesthetics and quality workmanship.",
+	"theme": {
+		"phrase": "Theme",
+		"themeSun": "Light",
+		"themeMoon": "Dark"
+	},
+	"system": "System",
+	"logo-nomadom": "Logo nomadoM",
+	"copyright": "All rights reserved",
+	"nomadom": "nomadoM",
+	"company": {
+		"phrase": "Company",
+		"headline": "nomadoM",
+		"name": "Modular Technologies Ltd.",
+		"city": "Cracow",
+		"country": "Poland",
+		"id": "ID PL9442214599",
+		"title": "Modular Technologies",
+		"subtitle": "We design and build modular houses"
+	},
+	"social": {
+		"facebook": "Facebook",
+		"instagram": "Instagram",
+		"twitter": "Twitter",
+		"phone": "Phone"
+	},
+	"language": {
+		"phrase": "Language",
+		"pl": "Polski",
+		"en": "English",
+		"de": "Deutsch",
+		"fr": "Français",
+		"ru": "Русский"
+	},
+	"projects": {
+		"phrase": "Projects",
+		"japonico-35": {
+			"name": "Japonico 35",
+			"title": "This is the time for you",
+			"subtitle": "japonico 35 is fully finished and ready to move in",
+			"alt": "japonico 35 is fully finished and ready to move in"
+		},
+		"optimo": {
+			"name": "Optimo",
+			"title": "Universal modular house",
+			"subtitle": "The ideal home for the young.",
+			"alt": "The ideal home for the young."
+		},
+		"bosco": {
+			"name": "Bosco",
+			"title": "A house as special as you are",
+			"subtitle": "Spacious and comfortable, it is perfect for everyday use and relaxation",
+			"alt": "Spacious and comfortable, it is perfect for everyday use and relaxation"
+		},
+		"cubico": {
+			"name": "Cubico",
+			"title": "A unique holiday home",
+			"subtitle": "Modular house on application up to 35m2!!",
+			"alt": "Modular house on application up to 35m2!!"
+		},
+		"techo-35": {
+			"name": "Techo 35",
+			"title": "Simple and modern house",
+			"subtitle": "Modular house on application up to 35m2!!",
+			"alt": "Modular house on application up to 35m2!!"
+		}
+	},
+	"team": "Team",
+	"navBar": {
+		"projects": "Projects",
+		"pricing": "Pricing",
+		"about": "About",
+		"contact": "Contact"
+	},
+	"avatar": {
+		"0": {
+			"title": "Chief Architect",
+			"subtitle": "MPOIA/019/2013"
+		},
+		"1": {
+			"title": "Chief Architect",
+			"subtitle": "MPOIA/045/2009"
+		},
+		"2": {
+			"title": "Architect",
+			"subtitle": "Cracow UT diploma 2020"
+		}
+	},
+	"sheet": {
+		"header": "Site content",
+		"footer": "Footer"
+	},
+	"elevation": {
+		"brick": "Brick",
+		"plaster": "Plaster",
+		"metal": "Metal",
+		"dark-wood": "Plaster",
+		"light-dark": "Plaster"
+	}
+}
