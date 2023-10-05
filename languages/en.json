@@ -97,5 +97,32 @@
 		"metal": "Metal",
 		"dark-wood": "Plaster",
 		"light-dark": "Plaster"
-	}
+	},
+	"zod": {
+		"username": {
+			"required": " User name is required",
+			"tooShort": "User name must be at least 5 characters long",
+			"tooLong": "User name must be at most 20 characters long"
+		},
+		"password": {
+			"required": " Password is required",
+			"requirements": "Password must contain: least one uppercase letter, least one lowercase letter, least one number and special character, least 8 characters long and less than 100 characters long",
+			"tooShort": "Password must consist of at least 8 characters",
+			"tooLong": "Password must consist of at most 100 characters"
+		},
+		"confirmPassword": {
+			"notMatch": "Passwords must match"
+		}
+	},
+	"register": "Register",
+	"userName": "User name",
+	"fullName": "Full name",
+	"password": "Password",
+	"confirmPassword": "Confirm password",
+	"error": {
+		"uniqueUserName": "User name with this name already exists",
+		"unexpected": "An unexpected error occurred. Please try again later"
+	},
+	"registerSuccess": "You have successfully registered",
+	"registerError": "An error occurred while registering"
 }

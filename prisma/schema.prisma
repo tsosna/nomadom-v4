@@ -26,7 +26,7 @@ model Project {
   name String
   icon String?
 
-  img Img @relation(fields: [imgId], references: [id])
+  img   Img @relation(fields: [imgId], references: [id])
   imgId Int @unique
 
   @@map("project")
@@ -42,10 +42,10 @@ model Img {
   alt     String?
   caption String?
 
-  project Project?
+  project   Project?
   elevation Elevation?
-  
-    @@map("img")
+
+  @@map("img")
 }
 
 model Elevation {
@@ -55,8 +55,65 @@ model Elevation {
 
   name String
 
-  img Img @relation(fields: [imgId], references: [id])
+  img   Img @relation(fields: [imgId], references: [id])
   imgId Int @unique
 
   @@map("elevation")
+}
+
+model Mainmenu {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  slug     String     @unique
+  name     String
+  path     String
+  icon     String?
+  sumbmenu Menuitem[]
+
+  @@map("main-menu")
+}
+
+model Menuitem {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  slug String  @unique
+  name String
+  path String
+  icon String?
+
+  mainmenu   Mainmenu @relation(fields: [mainmenuId], references: [id])
+  mainmenuId Int      @unique
+
+  @@map("sub-menu")
+}
+
+model User {
+  id           String    @id @unique
+  fullName     String?   @default("") @map("full_name")
+  userName     String    @unique @map("user_name")
+  auth_session Session[]
+  key          Key[]
+}
+
+model Session {
+  id             String @id @unique
+  user_id        String
+  active_expires BigInt
+  idle_expires   BigInt
+  user           User   @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
+}
+
+model Key {
+  id              String  @id @unique
+  hashed_password String?
+  user_id         String
+  user            User    @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
 }

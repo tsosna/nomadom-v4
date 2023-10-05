@@ -53,7 +53,11 @@ const config = {
 				nomadom: {
 					DEFAULT: 'hsl(var(--nomadom))',
 					foreground: 'hsl(var(--nomadom-foreground))'
-				}
+				},
+				success: 'rgb(var(--color-success) / <alpha-value>)' ,
+				warning: 'rgb(var(--color-warning) / <alpha-value>)' ,
+				danger: 'rgb(var(--color-danger) / <alpha-value>)' ,
+				info: 'rgb(var(--color-info) / <alpha-value>)' ,	
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

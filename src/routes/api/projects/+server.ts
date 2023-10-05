@@ -1,9 +1,9 @@
 import { json, type RequestHandler } from '@sveltejs/kit'
 
-import db from '$lib/database'
+import {prisma} from '$lib/server/prisma'
 
 export const GET: RequestHandler = async (event) => {
-	const projects = await db.project.findMany({
+	const projects = await prisma.project.findMany({
 		include:{img:{select:{alt:true, caption:true, hash:true, url:true}}}
 	})
 

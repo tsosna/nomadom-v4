@@ -24,7 +24,6 @@ export async function defineConfig(env) {
 					strategies: [{ type: 'localStorage' }]
 				}
 			}),
-			standardLintRules()
 		]
 	}
 }
