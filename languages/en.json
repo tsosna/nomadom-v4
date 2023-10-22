@@ -116,9 +116,16 @@
 	},
 	"register": "Register",
 	"userName": "User name",
-	"fullName": "Full name",
+	"fullName": "Full name (optional)",
 	"password": "Password",
 	"confirmPassword": "Confirm password",
+	"dashboard": "Dashboard",
+	"singupTitle": "Create an account",
+	"singupSubTitle": "Enter your email or login below to create your account",
+	"loginTitle": "Login an account",
+	"loginSubTitle": "Enter your email or login below to login your account",
+	"logout": "Logout",
+	"login": "Login",
 	"error": {
 		"uniqueUserName": "User name with this name already exists",
 		"unexpected": "An unexpected error occurred. Please try again later"

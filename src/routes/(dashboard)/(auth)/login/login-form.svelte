@@ -3,7 +3,7 @@
 	import { superForm } from 'sveltekit-superforms/client'
 	import type { SuperValidated } from 'sveltekit-superforms'
 
-	import type { RegisterSchema } from './schema.js'
+	import type { RegisterSchema } from './schema'
 	import { toastSuccess, writeError, writeSuccess } from '$lib/components/ui/toast/toast'
 
 	import { Button } from '$lib/components/ui/button'
@@ -37,7 +37,7 @@
 	$: error = Object.fromEntries(Object.entries($errors).map((key, value) => [key, value]))
 </script>
 
-<form method="POST" action="?/register" class="space-y-2" use:enhance>
+<form method="POST" action="?/login" class="space-y-4" use:enhance > 
 	<div>
 		<Label for="userName">{i('userName')}</Label>
 		<Input
@@ -93,28 +93,11 @@
 		{/if}
 	</div>
 
-	<div>
-		<Label for="confirmPassword">{i('confirmPassword')}</Label>
-		<Input
-			type="password"
-			name="confirmPassword"
-			id="confirmPassword"
-			autocapitalize="none"
-			autocomplete="password"
-			autocorrect="off"
-		/>
-		{#if $errors.confirmPassword}
-			<p class="text-danger text-xs italic">{i('zod.confirmPassword.notMatch')}</p>
-		{/if}
-	</div>
-	<div>
-		<Label for="fullName">{i('fullName')}</Label>
-		<Input name="fullName" />
-	</div>
+
 	<Button type="submit" color="primary" size="lg" variant="nomadom" class="capitalize gap-2">
 		{#if $delayed}
-			<Icon let:RotateCcw><RotateCcw /></Icon>
+			<Icon let:RotateCcw><RotateCcw class='animate-spin' /></Icon>
 		{/if}
-		{i('register')}
+		{i('login')}
 	</Button>
 </form>

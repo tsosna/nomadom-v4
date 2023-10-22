@@ -1,5 +1,128 @@
 {
-	"welcome": "Witaj w inlang",
-	"localization": "inlang — lokalizacja",
-	"description-web-site": "Prefabrykowane domy modułowe o wysokiej estetyce i jakości wykonania."
+	"description-web-site": "Prefabrykowane domy modułowe o wysokiej estetyce i jakości wykonania.",
+	"theme": {
+		"phrase": "Motyw",
+		"themeSun": "Jasny",
+		"themeMoon": "Ciemny"
+	},
+	"system": "System",
+	"logo-nomadom": "Logo nomadoM",
+	"copyright": "Wszelkie prawa zastrzeżone",
+	"nomadom": "nomadoM",
+	"company": {
+		"phrase": "Przedsiębiorstwo",
+		"headline": "nomadoM",
+		"name": "Technologie Modułowe sp. z o.o.",
+		"city": "Kraków",
+		"country": "Polska",
+		"id": "ID PL9442214599",
+		"title": "Technologie Modułowe",
+		"subtitle": "Projektujemy i budujemy domy modułowe"
+	},
+	"social": {
+		"facebook": "Facebook",
+		"instagram": "Instagram",
+		"twitter": "Twitter",
+		"phone": "Telefon"
+	},
+	"language": {
+		"phrase": "Język",
+		"pl": "Polski",
+		"en": "Angielski",
+		"de": "Niemiecki",
+		"fr": "Fracuski",
+		"ru": "Rosyjski"
+	},
+	"projects": {
+		"phrase": "Projekty",
+		"japonico-35": {
+			"name": "Japonico 35",
+			"title": "To jest czas dla ciebie",
+			"subtitle": "japonico 35 jest w pełni wykończony i gotowy do zamieszkania",
+			"alt": "japonico 35 jest w pełni wykończony i gotowy do zamieszkania"
+		},
+		"optimo": {
+			"name": "Optimo",
+			"title": "Uniwersalny dom modułowy",
+			"subtitle": "Idealny dom dla młodych ludzi.",
+			"alt": "Idealny dom dla młodych ludzi."
+		},
+		"bosco": {
+			"name": "Bosco",
+			"title": "Dom tak wyjątkowy jak Ty",
+			"subtitle": "Przestronny i wygodny, jest idealny do codziennego użytku i relaksu",
+			"alt": "Przestronny i wygodny, jest idealny do codziennego użytku i relaksu"
+		},
+		"cubico": {
+			"name": "Cubico",
+			"title": "A unique holiday home",
+			"subtitle": "Dom modułowy na zgłoszenie do 35m2!!!",
+			"alt": "Dom modułowy na zgłoszenie do 35m2!!!"
+		},
+		"techo-35": {
+			"name": "Techo 35",
+			"title": "Prosty i nowoczesny dom",
+			"subtitle": "Dom modułowy na zgłoszenie do 35m2!!!",
+			"alt": "Dom modułowy na zgłoszenie do 35m2!!!"
+		}
+	},
+	"team": "Zespół",
+	"navBar": {
+		"projects": "Projekty",
+		"pricing": "Wycena",
+		"about": "Informacje",
+		"contact": "Kontakt"
+	},
+	"avatar": {
+		"0": {
+			"title": "Główny Architekt",
+			"subtitle": "MPOIA/019/2013"
+		},
+		"1": {
+			"title": "Główny architekt",
+			"subtitle": "MPOIA/045/2009"
+		},
+		"2": {
+			"title": "Architekt",
+			"subtitle": "Cracow UT diploma 2020"
+		}
+	},
+	"sheet": {
+		"header": "Zawartość strony",
+		"footer": "Stopka"
+	},
+	"elevation": {
+		"brick": "Cegła",
+		"plaster": "Tynk",
+		"metal": "Metal",
+		"dark-wood": "Ciemne drewno",
+		"light-dark": "Jasne drewno"
+	},
+	"zod": {
+		"username": {
+			"required": " Nazwa użytkownika jest wymagana",
+			"tooShort": "Nazwa użytkownika musi składać się z co najmniej 5 znaków",
+			"tooLong": "Nazwa użytkownika musi składać się z co najwyżej 20 znaków"
+		},
+		"password": {
+			"required": " Hasło jest wymagane",
+			"requirements": "Hasło musi zawierać: co najmniej jedną wielką literę, co najmniej jedną małą literę, co najmniej jedną cyfrę i znak specjalny, co najmniej 8 znaków i mniej niż 100 znaków.",
+			"tooShort": "Hasło musi składać się z co najmniej 8 znaków",
+			"tooLong": "Hasło musi składać się z co najwyżej 100 znaków"
+		},
+		"confirmPassword": {
+			"notMatch": "Hasła muszą być zgodne"
+		}
+	},
+	"register": "Rejestr",
+	"userName": "Nazwa użytkownika",
+	"fullName": "Pełna nazwa",
+	"password": "Hasło",
+	"confirmPassword": "Potwierdź hasło",
+	"error": {
+		"uniqueUserName": "Nazwa użytkownika o tej nazwie już istnieje",
+		"unexpected": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie później"
+	},
+	"registerSuccess": "Rejestracja przebiegła pomyślnie",
+	"registerError": "Wystąpił błąd podczas rejestracji"
 }

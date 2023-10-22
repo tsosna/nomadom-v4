@@ -1,5 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit'
-import { registerSchema } from './schema.js'
+import { registerSchema } from './schema'
 import { message, setError, superValidate } from 'sveltekit-superforms/server'
 import { LuciaError } from 'lucia'
 
@@ -13,16 +13,19 @@ interface PrismaError extends Error {
 }
 
 export const load = async ({ locals }) => {
-	const session = await locals.auth.validate();
-	if (session) throw redirect(302, "/");
-	return {session};
-};
-
+	const session = await locals.auth.validate()
+	if (session) throw redirect(302, '/')
+	return { session }
+}
 
 export const actions = {
-	register: async ({ request, locals }) => {
+	login: async ({ request, locals }) => {
 		const formData = await request.formData()
+
 		const form = await superValidate(formData, registerSchema)
+
+        console.log(form);
+        
 
 		if (!form.valid) return fail(400, { form })
 
@@ -32,32 +35,24 @@ export const actions = {
 		console.log(userName, password)
 
 		try {
-			const user = await auth.createUser({
-				key: {
-					providerId: 'userName',
-					providerUserId: userName.toLowerCase(),
-					password
-				},
-				attributes: {
-					userName,
-					fullName: ''
-				}
-			})
+			const key = await auth.useKey('userName', userName.toLowerCase(), password)
 			const session = await auth.createSession({
-				userId: user.userId,
+				userId: key.userId,
 				attributes: {}
 			})
+
 			locals.auth.setSession(session)
 		} catch (error: unknown) {
-
 			const prismaError = error as PrismaError
+
+			console.log(prismaError.code)
 
 			if (prismaError.code === 'P2002') {
 				return setError(
 					form,
 					'userName',
 					`${prismaError.code} - ${prismaError.meta?.cause || ''}: User name already exists`,
-					{status: 400}
+					{ status: 400 }
 				)
 			}
 			if (error instanceof LuciaError) {

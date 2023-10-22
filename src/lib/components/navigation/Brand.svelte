@@ -9,5 +9,5 @@
 
 <Button let:Logo href="/" variant="outline" class="border-0 gap-2 bg-accent">
 	<Logo class={cn('w-9 h-8 p-0.5 rounded-sm', className)} />
-	{i('company.title')}
+	<slot />
 </Button>

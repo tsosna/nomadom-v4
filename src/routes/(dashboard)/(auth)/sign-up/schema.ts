@@ -22,7 +22,7 @@ export const registerSchema = z
 		confirmPassword: z.string({ required_error: 'Confirm password is required' })
 	})
 	.refine((data) => data.password === data.confirmPassword, {
-		message: 'Passwords must match',
+		message: 'Confirm Passwords must match',
 		path: ['confirmPassword']
 	})
 

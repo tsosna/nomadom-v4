@@ -9,10 +9,6 @@ export async function defineConfig(env) {
 		'https://cdn.jsdelivr.net/npm/@inlang/sdk-js-plugin@0.11.8/dist/index.js'
 	)
 
-	const { default: standardLintRules } = await env.$import(
-		'https://cdn.jsdelivr.net/npm/@inlang/plugin-standard-lint-rules@3/dist/index.js'
-	)
-
 	return {
 		referenceLanguage: 'en',
 		plugins: [
@@ -23,7 +19,7 @@ export async function defineConfig(env) {
 				languageNegotiation: {
 					strategies: [{ type: 'localStorage' }]
 				}
-			}),
+			})
 		]
 	}
 }
